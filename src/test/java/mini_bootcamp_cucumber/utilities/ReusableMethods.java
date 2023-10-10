@@ -367,4 +367,15 @@ public class ReusableMethods {
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
         jsexecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    /**
+     * bu metot ile JS yolu string olarak verilen elementi JavascriptExecutor kullanarak tiklayabilirim
+     * @param webElement click yapilacak webelement yolu string olarak verilir
+     */
+    public static void clickJSElementWithJavaScript(String javascriptYolu) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        WebElement webElement = (WebElement) jse.executeScript("return " + javascriptYolu + "");
+        jse.executeScript("arguments[0].click();", webElement);
+
+    }
 }
