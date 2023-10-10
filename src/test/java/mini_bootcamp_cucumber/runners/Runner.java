@@ -9,9 +9,6 @@ import org.junit.runner.RunWith;
         plugin = {
                 "pretty",//raporlarin daha ikunakli olmasi icin
                 "html:target/default-cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt"
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",//features folder path
