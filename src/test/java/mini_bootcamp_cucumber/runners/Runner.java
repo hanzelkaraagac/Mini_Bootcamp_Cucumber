@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/failed_scenarios.txt"
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "./src/test/resources/features",//features folder path
-        glue = {"stepdefinitions"},   //stepdefinitions path
-        tags = "",
+        features = "src/test/resources/features",//features folder path
+        glue = {"mini_bootcamp_cucumber/stepdefinitions", "hooks"},   //stepdefinitions path
+        tags = "@teknosa",
         dryRun = false
 )
 public class Runner {
