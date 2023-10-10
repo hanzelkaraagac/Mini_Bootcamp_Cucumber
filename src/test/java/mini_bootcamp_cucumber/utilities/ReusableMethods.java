@@ -47,6 +47,11 @@ public class ReusableMethods {
     }
 
     //========Hover Over=====//
+
+    /**
+     * Bu metot bir webelementin ustune gidip beklemeyi saglar.
+     * @param element ustune gidilip beklenecek elementin locate'dir
+     */
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
