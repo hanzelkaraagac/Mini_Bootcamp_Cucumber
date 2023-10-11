@@ -1,10 +1,13 @@
 package mini_bootcamp_cucumber.utilities;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -45,6 +48,10 @@ public class Driver {
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+
+                    chromeOptions.setPageLoadTimeout(Duration.ofSeconds(14));
                     break;
 
                 case "safari" :
