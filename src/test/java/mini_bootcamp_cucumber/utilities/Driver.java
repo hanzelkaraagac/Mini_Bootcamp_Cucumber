@@ -50,7 +50,6 @@ public class Driver {
                     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-
                     chromeOptions.setPageLoadTimeout(Duration.ofSeconds(14));
                     break;
 

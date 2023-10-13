@@ -7,7 +7,7 @@
 
 
 Scenario: Parametreli Arama Kutusu Testi
-  Given madame coco sitesine gidilir
+  Given "madame coco" sitesine gidilir
   And ingilizce menu secilir
   And Arama kutusuna "<urun>" yazilir
   Then sonuclarada "<urun>" oldugu dogrulanir
