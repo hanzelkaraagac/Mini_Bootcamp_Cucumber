@@ -15,7 +15,7 @@ Feature: Negatif Uyelik
 
 
   Scenario Outline: Negatif Uyelik
-    Given boyner sitesine gidilir
+    Given "boyner" sitesine gidilir
     When login ikonu ustune gidilir
     And uye ol linki tiklanir
     Then uyelik sayfasinda oldugu dogrulanir

@@ -102,7 +102,7 @@ public class Day03ScenarioOutline_StepDef {
 
     @And("giris yap butonu tiklanir")
     public void girisYapButonuTiklanir() {
-        ReusableMethods.clickJSElementWithJavaScript("document.querySelector(\"#header-container > div.header-top_root__YsOJt > div > div > div.header-top_headerTopIcon___SR_X > div > div:nth-child(1) > div > div > a > button\")");
+        ReusableMethods.clickJSElementWithJavaScript("querySelector(\"#header-container > div.header-top_root__YsOJt > div > div > div.header-top_headerTopIcon___SR_X > div > div:nth-child(1) > div > div > a > button\")");
     }
 
     @Then("giris yapildigi dogrulanir")
