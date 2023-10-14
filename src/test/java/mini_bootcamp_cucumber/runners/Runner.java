@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",//features folder path
         glue = {"mini_bootcamp_cucumber/stepdefinitions"},   //stepdefinitions path
+
         tags = "@ets",
         dryRun = false
 )
