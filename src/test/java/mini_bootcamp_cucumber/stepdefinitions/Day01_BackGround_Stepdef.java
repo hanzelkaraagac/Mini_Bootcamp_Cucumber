@@ -55,7 +55,7 @@ public class Day01_BackGround_Stepdef {
     @Then("sayfaya gidilemedigi dogrulanir")
     public void sayfayaGidilemedigiDogrulanir() {
         String actualUrl= Driver.getDriver().getCurrentUrl();
-        assertEquals(expectedUrl,actualUrl);
+        assertEquals("hakan",actualUrl);
         Driver.closeDriver();
 
     }

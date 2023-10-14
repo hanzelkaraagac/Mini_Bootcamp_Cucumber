@@ -1,5 +1,6 @@
 package mini_bootcamp_cucumber.stepdefinitions;
 
+
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import mini_bootcamp_cucumber.pages.Day02SearchParameterizing_Page;
