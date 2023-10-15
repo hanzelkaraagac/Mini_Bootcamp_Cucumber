@@ -23,13 +23,15 @@ public class Day05_Hooks_StepDef {
     }
     @Then("sonuc sayfasinda {string} oldugu dogrulanir")
     public void sonuc_sayfasinda_oldugu_dogrulanir(String string) {
-//        if(string.contains("iran yapıştırıcısı")){
-//            System.out.println("expectedTitle = " + string);
-//            System.out.println("actualTitle = " + page.sonucText.getText());
-//            assertFalse(page.sonucText.getText().contains(string));
-//        }else
-//        assertTrue(page.sonucText.getText().contains(string));
-        assertTrue("hakan".contains("actual") );
+        if(string.contains("iran yapıştırıcısı")){
+            System.out.println("expectedTitle = " + string);
+            System.out.println("actualTitle = " + page.sonucText.getText());
+            assertFalse(page.sonucText.getText().contains(string));
+        }else
+            System.out.println("expectedTitle = " + string);
+        System.out.println("actualTitle = " + page.sonucText.getText());
+        assertTrue(page.sonucText.getText().contains(string));
+       // assertTrue("hakan".contains("actual") );
     }
     @When("sonuc sayfasindaki arama sonuc sayisi alinir")
     public void sonuc_sayfasindaki_arama_sonuc_sayisi_alinir() {
