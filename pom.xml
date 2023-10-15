@@ -45,6 +45,23 @@
             <version>1.0.2</version>
         </dependency>
 
+        <!-- Office belgelerinden mesala Excell'den veri okumak için-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
+        <!-- Office belgelerinden mesala Excell'den veri okumak için-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
+
 
 
     </dependencies>
