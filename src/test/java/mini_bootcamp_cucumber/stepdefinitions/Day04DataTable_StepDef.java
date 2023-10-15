@@ -33,6 +33,9 @@ public class Day04DataTable_StepDef {
             case "ets tur":
                 Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
                 break;
+                case "herokuapp":
+                Driver.getDriver().get(ConfigurationReader.getProperty("herokuapp"));
+                break;
             default:
                 break;
         }
