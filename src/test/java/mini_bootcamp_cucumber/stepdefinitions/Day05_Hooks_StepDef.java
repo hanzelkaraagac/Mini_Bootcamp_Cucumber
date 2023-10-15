@@ -3,11 +3,9 @@ package mini_bootcamp_cucumber.stepdefinitions;
 import io.cucumber.java.en.*;
 import mini_bootcamp_cucumber.pages.Day05_Hooks_Page;
 import mini_bootcamp_cucumber.utilities.ReusableMethods;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class Day05_Hooks_StepDef {
 
@@ -25,10 +23,13 @@ public class Day05_Hooks_StepDef {
     }
     @Then("sonuc sayfasinda {string} oldugu dogrulanir")
     public void sonuc_sayfasinda_oldugu_dogrulanir(String string) {
-        if(string.contains("iran yapıştırıcısı")){
-            assertFalse(page.sonucText.getText().contains(string));
-        }else
-        assertTrue(page.sonucText.getText().contains(string));
+//        if(string.contains("iran yapıştırıcısı")){
+//            System.out.println("expectedTitle = " + string);
+//            System.out.println("actualTitle = " + page.sonucText.getText());
+//            assertFalse(page.sonucText.getText().contains(string));
+//        }else
+//        assertTrue(page.sonucText.getText().contains(string));
+        assertTrue("hakan".contains("actual") );
     }
     @When("sonuc sayfasindaki arama sonuc sayisi alinir")
     public void sonuc_sayfasindaki_arama_sonuc_sayisi_alinir() {
