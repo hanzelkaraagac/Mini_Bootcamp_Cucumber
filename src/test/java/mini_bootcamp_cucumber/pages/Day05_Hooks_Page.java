@@ -13,7 +13,7 @@ public class Day05_Hooks_Page {
 
     @FindBy(css = "input[placeholder")
     public WebElement aramaKutusu;
-    @FindBy(css = "div[class='dscrptn dscrptn-V2")
+    @FindBy(xpath = "//h1[normalize-space()='iran yapıştırıcısı']")
     public WebElement sonucText;
     @FindBy(css = "div[title='Kapat")
     public WebElement reklam;
