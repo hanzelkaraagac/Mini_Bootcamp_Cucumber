@@ -29,10 +29,11 @@ public class Day06Excell_StepDef {
             ReusableMethods.wait(2);
             page.submit.click();
 
+            ReusableMethods.waitForVisibility(page.addContact, 15);
             String secondUrl=Driver.getDriver().getCurrentUrl();
             System.out.println("firstUrl = " + firstUrl);
             System.out.println("secondUrl = " + secondUrl);
-            //assertFalse(firstUrl.equals(secondUrl));
+            assertFalse(firstUrl.equals(secondUrl));
             assertTrue(page.addContact.isDisplayed());
             page.logout.click();
             
