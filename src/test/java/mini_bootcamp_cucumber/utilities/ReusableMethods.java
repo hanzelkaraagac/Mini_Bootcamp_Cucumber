@@ -445,6 +445,27 @@ public class ReusableMethods {
 
     }
 
+    /**
+     * elemente JavascriptExecutor ile string gonderir(java sendkey() ile ayni)
+     *
+     * @param string     webElemente sendKey ile gonderilecek text
+     * @param webElement sendKey ile gonderilecek webelement
+     */
+    public static void sendKeyWithJavaScript(String string, WebElement webElement) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();//Casting
+        jse.executeScript("arguments[0].value = '" + string + "';", webElement);
 
+    }
+
+    /**
+     * JavaScript ile webelement olusturma
+     *
+     * @param javascriptYolu internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
+     */
+    public static WebElement webelementJavaScript(String javascriptYolu) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement webElement = (WebElement) js.executeScript("return " + javascriptYolu + "");
+        return webElement;
+    }
 
 }
