@@ -2,6 +2,7 @@ package mini_bootcamp_cucumber.stepdefinitions;
 
 
 import com.github.javafaker.Faker;
+import com.sun.java.accessibility.util.Translator;
 import io.cucumber.java.en.*;
 import mini_bootcamp_cucumber.pages.Day02SearchParameterizing_Page;
 import mini_bootcamp_cucumber.utilities.ConfigurationReader;
