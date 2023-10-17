@@ -398,6 +398,52 @@ public class ReusableMethods {
         return text;
     }
 
+    /**
+     * İşlem yapılacak olan webelementin arkaplanını renklendirir
+     * @param element etrafi cizilecek element
+     * @param driver driver
+     */
+    public static void flash(WebElement element,WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        String elementColor=element.getCssValue("backgroundColor"); //locate alinan yerin  arka plan rengini alir
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,0,0)", element, driver); //elemente siyah renk verir rgb kizmi rengi belirtir
+            //changeColor("rgb(255,0,0)", element, driver); //kirmizi renk
+            //changeColor("rgb(0,255,0)", element, driver); //yesil renk
+            changeColor(elementColor, element, driver);
+        }
+    }
+
+    /**
+     * flash metoduna renk degistirme islemini yaptirir. Elementin arka plan renginin parametre olarak atanacagini bildirir.
+     * @param color arka plan rengi
+     * @param element   arka plan rengi degisecek element
+     * @param driver
+     */
+    public static void changeColor(String color, WebElement element, WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver; //javascript kodlarini calistirir
+        js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element); //elementin renginin degismesini sağlar
+
+        try{
+            Thread.sleep(20);
+        }catch (Exception e){
+
+        }
+    }
+
+    /** Bu metot islem yapilacak elementin etrafina renkli cerceve cizerek belirgin hale getirir.
+     *
+     * @param locate islem yapilacak elementin cssSelector turunden locate string olarak girilmeli
+     */
+    public static void showElementWithFrame(String locate){
+        WebElement element = Driver.getDriver().findElement(By.cssSelector(""+locate+""));
+        String script = "arguments[0].style.border='3px solid red';";
+//        String script = "arguments[0].style.border='3px solid white';";
+//        String script = "arguments[0].style.border='3px solid yellow';";
+//        String script = "arguments[0].style.border='3px solid green';";
+        ((JavascriptExecutor) Driver.getDriver()).executeScript(script, element);
+
+    }
 
 
 

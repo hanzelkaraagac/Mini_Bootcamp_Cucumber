@@ -3,7 +3,6 @@ package mini_bootcamp_cucumber.runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.support.FindBy;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -13,12 +12,11 @@ import org.openqa.selenium.support.FindBy;
                 "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "src/test/resources/features",//features folder path
+        features = "@Failed/failedScenarios.txt",//hata veren dosyalarin yolu
         glue = {"mini_bootcamp_cucumber/stepdefinitions","hooks"},   //stepdefinitions path
-        tags = "@rerun",
         dryRun = false
 )
-public class Runner {
+public class ReRunner {
 }
 
 //Bu sinif Test Caseleri run etmek icin kullanilir
