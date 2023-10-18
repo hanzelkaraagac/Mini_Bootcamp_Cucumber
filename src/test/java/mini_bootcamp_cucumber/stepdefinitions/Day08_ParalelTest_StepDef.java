@@ -50,6 +50,7 @@ public class Day08_ParalelTest_StepDef {
     public void emailVePasswordKutularinaVeriGirilir(DataTable dataTable) {
         List<String> emailPassword= dataTable.row(1);
         for (int i = 0; i < emailPassword.size(); i++) {
+
             ReusableMethods.flash(page.email, Driver.getDriver());
             page.email.sendKeys(dataTable.row(1).get(0));
             ReusableMethods.flash(page.password, Driver.getDriver());
