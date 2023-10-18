@@ -25,4 +25,6 @@ public class Day08_ParalelTest_Page {
     public WebElement password;
     @FindBy(id= "submit-button")
     public WebElement submitButton;
+    @FindBy(xpath= "(//button[text()='Evet'])[1]")
+    public WebElement reklam;
 }
