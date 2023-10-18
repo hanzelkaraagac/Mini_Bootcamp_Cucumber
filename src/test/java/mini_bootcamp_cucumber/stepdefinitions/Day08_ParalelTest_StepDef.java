@@ -53,6 +53,7 @@ public class Day08_ParalelTest_StepDef {
 
             ReusableMethods.flash(page.email, Driver.getDriver());
             page.email.sendKeys(dataTable.row(1).get(0));
+
             ReusableMethods.flash(page.password, Driver.getDriver());
             page.password.sendKeys(dataTable.row(1).get(i+1));
             page.submitButton.click();
