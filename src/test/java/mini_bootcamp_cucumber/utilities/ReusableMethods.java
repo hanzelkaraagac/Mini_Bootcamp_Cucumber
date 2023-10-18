@@ -468,4 +468,18 @@ public class ReusableMethods {
         return webElement;
     }
 
+    /**
+     * Bu metot ile elementin className değeri string olarak verilerek o classtaki text alinir.
+     *
+     * @param xpath text degeri alinmak istenen class ismi string olarak verilir
+     * @return
+     */
+    public static String getTextWithJavaScript(String xpath) {
+        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
+
+        // JavaScriptExecutor kullanarak elementin içeriğini al
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        String text = (String) jsExecutor.executeScript("return arguments[0].textContent;", element);
+        return text;
+    }
 }
