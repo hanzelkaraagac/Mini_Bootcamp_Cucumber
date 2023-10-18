@@ -3,7 +3,6 @@ package mini_bootcamp_cucumber.runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.support.FindBy;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -18,7 +17,7 @@ import org.openqa.selenium.support.FindBy;
         tags = "@paralel",
         dryRun = false
 )
-public class Runner {
+public class OzHakkikiRunnerSpor {
 }
 
 //Bu sinif Test Caseleri run etmek icin kullanilir
