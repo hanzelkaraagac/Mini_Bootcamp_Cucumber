@@ -61,8 +61,46 @@
             <version>5.2.3</version>
         </dependency>
 
-
-
     </dependencies>
+
+    <build>
+    <plugins>
+    <!-- paralel test icin  -->
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+            <testFailureIgnore>true</testFailureIgnore>   <!-- senaryo fail olursa calismaya devam et  -->
+            <skipTests>false</skipTests>
+            <includes>
+                <include>**/runners/*Runner*.java</include>       <!-- bu yolun dogru oldugunu kontrol et  -->
+            </includes>
+        </configuration>
+    </plugin>
+    <!-- paralel test icin  -->
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+            <parallel>methods</parallel>
+            <threadCount>2</threadCount> <!--aynı anda 2 browser çalıştırılacağı anlamına gelir. -->
+            <perCoreThreadCount>false</perCoreThreadCount>
+            <forkCount>2</forkCount> <!-- iki ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
+            <reuseForks>true</reuseForks> <!--Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
+            <includes>
+                <include>**/runners/*Runner*.java</include>  <!-- bu yolun dogru oldugunu kontrol et  -->
+            </includes>
+            <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
+        </configuration>
+    </plugin>
+        </plugins>
+</build>
+
+
+
 
 </project>

@@ -11,10 +11,14 @@ public class Day07_ReRun_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id= "myGlobalSearchBtn")
+    @FindBy(xpath= "//button[@id='myGlobalSearchBtn']")
     public WebElement aramaButonu;
-    @FindBy(id= "myGlobalSearchInput")
+    @FindBy(xpath= "//span[@id='userToAcceptButton']")
+    public WebElement kabulEt;
+    @FindBy(xpath= "//div[@class='search-box-new-container']/button[@id='myGlobalSearchBtn']")
     public WebElement aramaKutusu;
-    @FindBy(css= "h-title mb-0")
+    @FindBy(xpath= "h2[normalize-space()='\n" +
+            "                        Qa tester Haberleri\n" +
+            "                    '")//h1[='iran yapıştırıcısı']
     public WebElement aramaSonucu;
 }
