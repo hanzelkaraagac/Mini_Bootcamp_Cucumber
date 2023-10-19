@@ -60,17 +60,29 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.3</version>
         </dependency>
+
+        <!-- spark ve pdf report icin -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.8.4</version>
         </dependency>
 
+        <!-- cucumber report icin -->
         <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>maven-cucumber-reporting</artifactId>
             <version>5.7.6</version>
+        </dependency>
+
+        <!-- cucumber report icin -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>6.8.1</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
 
