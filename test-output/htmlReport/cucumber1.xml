@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.27" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Paralel Test" name="Paralel Test" time="26.776">
+<testsuite name="Cucumber" time="23.663" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Paralel Test" name="Paralel Test" time="23.393">
 <system-out><![CDATA[
 Given "pazarama" sitesine gidilir...........................................passed
 When search boxina "jenga" yazilir..........................................passed
