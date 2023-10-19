@@ -9,7 +9,10 @@ import org.junit.runner.RunWith;
         plugin = {
                 "pretty",//raporlarin daha ikunakli olmasi icin
                 "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber1.json",  //plugin ekledikten sonra bunu cucumber report için ekle. Paralel test icin dosya adina 1 rakami ekle
+
                 "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
+
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",//features folder path

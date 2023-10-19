@@ -21,6 +21,9 @@ public class Day04DataTable_StepDef {
             case "cicek sepeti":
                 Driver.getDriver().get(ConfigurationReader.getProperty("ciceksepeti"));
                 break;
+                case "getir":
+                Driver.getDriver().get(ConfigurationReader.getProperty("getir"));
+                break;
                 case "pazarama":
                 Driver.getDriver().get(ConfigurationReader.getProperty("pazarama"));
                 break;
