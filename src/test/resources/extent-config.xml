@@ -14,10 +14,10 @@
         <protocol>http</protocol>
 
         <!-- title of the document -->
-        <documentTitle>Getir Reports</documentTitle>   <!-- bu rapor ismini degistirebilirsiniz -->
+        <documentTitle>Getir Reports</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Getir Report</reportName>  <!-- bu rapor ismini degistirebilirsiniz -->
+        <reportName>Getir Report</reportName>
 
         <!-- location of charts in the test view -->
         <!-- top, bottom -->

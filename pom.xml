@@ -102,6 +102,8 @@
             </includes>
         </configuration>
     </plugin>
+
+
     <!-- paralel test icin  -->
 
     <plugin>
