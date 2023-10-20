@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",//raporlarin daha ikunakli olmasi icin
-                "html:target/default-cucumber-reports.html",
+                "html:target/default-cucumber-reports1.html",
                 "json:target/json-reports/cucumber1.json",  //plugin ekledikten sonra bunu cucumber report için ekle. Paralel test icin dosya adina 1 rakami ekle
-                "junit:test-output/htmlReport/cucumber.xml", //xml report için
+                "junit:test-output/htmlReport/cucumber1.xml", //xml report için
                 "rerun:Failed/failedScenarios.txt" // bu satirdaki kod kosulan testlerden hata verenlerin yeniden ReRunner classi tarafindan kosulmasini saglar
 
         },
